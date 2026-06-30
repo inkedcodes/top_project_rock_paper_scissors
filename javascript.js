@@ -20,14 +20,18 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
+
         console.log(`You chose ${humanChoice}. Computer chose ${computerChoice}.`);
-        if(humanChoice === "paper" && computerChoice === "rock" || humanChoice === "rock" && computerChoice === "scissor" || humanChoice === "scissor" && computerChoice === "paper") {
+        if(humanChoice === "paper" && computerChoice === "rock" || 
+            humanChoice === "rock" && computerChoice === "scissor" || 
+            humanChoice === "scissor" && computerChoice === "paper") {
             humanScore += 1
-        
             console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
             console.log(`You = ${humanScore} Computer =  ${computerScore}`);
             
-        } else if (humanChoice === "rock" && computerChoice === "paper" || humanChoice === "scissor" && computerChoice === "rock" || humanChoice === "paper" && computerChoice === "scissor") {
+        } else if (humanChoice === "rock" && computerChoice === "paper" || 
+                    humanChoice === "scissor" && computerChoice === "rock" || 
+                    humanChoice === "paper" && computerChoice === "scissor") {
             computerScore += 1
             console.log(`You lose! ${computerChoice} beats ${humanChoice}.`) 
             console.log(`You = ${humanScore} Computer =  ${computerScore}`);
@@ -59,4 +63,3 @@ function playGame() {
 }
 
 playGame();
-
